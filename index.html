@@ -100,7 +100,7 @@ button:hover { background: #0056b3; }
 <p id="resultado"></p>
 
 <script>
-document.getElementById("formulario").addEventListener("submit", async function(e){
+document.getElementById("formulario").addEventListener("submit", async function(e) {
   e.preventDefault();
 
   const form = document.getElementById("formulario");
@@ -119,14 +119,15 @@ document.getElementById("formulario").addEventListener("submit", async function(
       document.getElementById("resultado").innerText = "❌ Error: " + result.message;
     }
   } catch (err) {
-    console.error(err);
-    document.getElementById("resultado").innerText = "❌ Error al enviar";
+    document.getElementById("resultado").innerText = "❌ Error al enviar: " + err;
   }
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
